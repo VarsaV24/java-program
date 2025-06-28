@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        int dcount=0;
+        for(int i=0;i<size;i++){
+            boolean isdis=true;
+            for(int j=0;j<i;j++){
+                if(arr[i]==arr[j]){
+                    isdis=false;
+                    break;
+                }               
+            }  
+            if(isdis){
+                dcount++;
+            }
+        }
+        if(dcount==1){
+            System.out.println("There are "+dcount+" distinct element in the array.");
+        }
+        else{
+            System.out.println("There are "+dcount+" distinct elements in the array.");
+        }
+    }
+}
