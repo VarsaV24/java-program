@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String a=sc.nextLine().toLowerCase();;
+        String result=reverseString(a);
+        System.out.println(result);
+    }
+    static String reverseString(String S){
+        String reversed="";
+        for(int i=S.length()-1;i>=0;i--){
+            reversed+=S.charAt(i);
+        }
+        return reversed;
+    }
+}
