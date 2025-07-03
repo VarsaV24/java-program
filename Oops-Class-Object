@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+class Rectangle{
+    Scanner sc=new Scanner(System.in);
+    void area(int w,int h){
+        System.out.printf("Area of the Rectangle is %.2f\n",(float)w*h);
+    }
+    void perimeter(int w,int h){
+        System.out.printf("Perimeter of the Rectangle is %.2f",(float)(2*(w+h)));
+    }
+}
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int w=sc.nextInt();
+        int h=sc.nextInt();
+        Rectangle obj=new Rectangle();
+        if(w<=10 && h<=10){
+            System.out.println("Here your Answers!!!");
+            obj.area(w,h);
+            obj.perimeter(w,h);
+        }
+        else{
+            System.out.println("Hello User,Kindly Enter the valid Input.");
+        }
+    }
+}
